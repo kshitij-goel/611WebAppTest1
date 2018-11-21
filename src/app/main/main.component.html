@@ -1,29 +1,48 @@
 <div class="main">
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Fluid jumbotron</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-    <form>
-      <div class="form-group">
-          <label class="switch">
-            <input type="checkbox"><span class="slider round"></span>
-          </label>
-      </div>
-      <br><br>
-      <div class="col-md-4">
-        <div class="form-group">
-          <label class="switch">
-            <input type="checkbox"><span class="slider round"></span>
-          </label>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="form-group">
-          test
-        </div>
-      </div>
-    </form>
+
+
+<div id="outer_container" style="display: table-row ; width: 100% ;height: 100% ;position: absolute;top: 30% ;left:40%">
+  <div id="overrideBox" style="width: 500px ;height: 100px ;margin-left: 10%">
+      <span >OVERRIDE</span>
+      <label class="switch" style="width: 60px ;margin-right: 20px" >
+        <input type="checkbox" >
+        <span class="slider round"></span>
+      </label>
 
   </div>
+ <div id="switchOne" style="display: flex ; width: 500px ;height: 100px" >
+     <div style="margin-right: 43% ; width: 50px ;height: 30px">
+        <div  id="textOne" style="background-color: red ;height: 50px ;width: 80px "></div>
+     </div> 
+     <span >Red</span>
+      <label class="switch" style="width: 60px ;margin-right: 20px" >
+        <input type="checkbox" >
+        <span class="slider round"></span>
+    </label>
+ </div> 
+  <div id="switchtwo" style="display: flex ; width: 500px ;height: 100px" >
+     <div   style="margin-right:  40%  ; width: 50px ;height: 30px " >
+        <div  id="textTwo" style="background-color: red ;height: 50px ;width: 80px "></div>
+     </div>
+     <span >Yellow</span>
+     <label class="switch" style="width: 60px ;margin-right: 20px" >
+        <input type="checkbox" >
+        <span class="slider round"></span>
+     </label>
+  </div> 
+   <div id="switchthree" style="display: flex ; width: 500px ;height: 100px">
+      <div  style="margin-right:  40%  ; width: 50px ;height: 30px " >
+        <div  id="textThree" style="background-color: red ;height: 50px ;width: 80px "></div>
+      </div> <span >Green</span>
+      <label class="switch" style="width: 60px ;margin-right: 20px">
+        <input type="checkbox" >
+        <span class="slider round"></span>
+    </label>
+   </div> 
+  
+
+
 </div>
+<div id="sideDiv" style=" width: 100% ;height: 100% ;position: absolute;top: 50% ;left:80%"><span style=" font-size:20px ;">UltraSonic Sensor Reading</span><br><br><span id="sensorReading" style="width: 100% ; height: 100px ; font-size:20px ;padding: 10px; box-shadow: 2px 2px 2px 2px #888888; border: 1px solid;margin-left: 30px"> 127.0000000009</span></div>
+
 </div>
