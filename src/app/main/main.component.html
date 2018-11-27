@@ -1,48 +1,52 @@
 <div class="main">
 
-
-<div id="outer_container" style="display: table-row ; width: 100% ;height: 100% ;position: absolute;top: 30% ;left:40%">
-  <div id="overrideBox" style="width: 500px ;height: 100px ;margin-left: 10%">
-      <span >OVERRIDE</span>
-      <label class="switch" style="width: 60px ;margin-right: 20px" >
-        <input type="checkbox" >
-        <span class="slider round"></span>
+  <div class="override-outer" id="outer_container">
+    <div class="override-box" id="overrideBox">
+        <span >OVERRIDE</span>
+        <label class="switch switch-label">
+          <input type="checkbox">
+          <span class="slider round" (click)="overrideClick()" *ngIf="!overrideDis"></span>
+        </label>
+    </div>
+    <div class="switch-outer" id="switchOne">
+      <div class="color-parent">
+        <div class="color-box" id="textOne" [ngStyle]="redStatus ? {'background-color': 'red'} : {'background-color': 'white'} "></div>
+      </div>
+      <span *ngIf="!redDis">Red</span>
+      <label class="switch switch-label">
+        <input type="checkbox" [disabled]="redDis" id="redSlider">
+        <span class="slider round" (click)="redClick(this)" *ngIf="!redDis"></span>
       </label>
-
-  </div>
- <div id="switchOne" style="display: flex ; width: 500px ;height: 100px" >
-     <div style="margin-right: 43% ; width: 50px ;height: 30px">
-        <div  id="textOne" style="background-color: red ;height: 50px ;width: 80px "></div>
-     </div> 
-     <span >Red</span>
-      <label class="switch" style="width: 60px ;margin-right: 20px" >
-        <input type="checkbox" >
-        <span class="slider round"></span>
-    </label>
- </div> 
-  <div id="switchtwo" style="display: flex ; width: 500px ;height: 100px" >
-     <div   style="margin-right:  40%  ; width: 50px ;height: 30px " >
-        <div  id="textTwo" style="background-color: red ;height: 50px ;width: 80px "></div>
+    </div>
+    <div class="switch-outer" id="switchtwo">
+      <div class="color-parent">
+        <div class="color-box" id="textTwo" [ngStyle]="yellowStatus ? {'background-color': 'yellow'} : {'background-color': 'white'} "></div>
      </div>
-     <span >Yellow</span>
-     <label class="switch" style="width: 60px ;margin-right: 20px" >
-        <input type="checkbox" >
-        <span class="slider round"></span>
+     <span *ngIf="!yellowDis">Yellow</span>
+      <label class="switch switch-label">
+       <input type="checkbox" [disabled]="yellowDis" id="yellowSlider">
+       <span class="slider round" (click)="yellowClick()" *ngIf="!yellowDis"></span>
      </label>
-  </div> 
-   <div id="switchthree" style="display: flex ; width: 500px ;height: 100px">
-      <div  style="margin-right:  40%  ; width: 50px ;height: 30px " >
-        <div  id="textThree" style="background-color: red ;height: 50px ;width: 80px "></div>
-      </div> <span >Green</span>
-      <label class="switch" style="width: 60px ;margin-right: 20px">
-        <input type="checkbox" >
-        <span class="slider round"></span>
-    </label>
-   </div> 
-  
+    </div>
+    <div class="switch-outer" id="switchthree">
+      <div class="color-parent">
+        <div class="color-box" id="textThree" [ngStyle]="greenStatus ? {'background-color': 'green'} : {'background-color': 'white'} "></div>
+      </div>
+      <span *ngIf="!greenDis">Green</span>
+      <label class="switch switch-label">
+        <input type="checkbox" [disabled]="greenDis" id="greenSlider">
+        <span class="slider round" (click)="greenClick()" *ngIf="!greenDis"></span>
+      </label>
+    </div>
+  </div>
 
-
-</div>
-<div id="sideDiv" style=" width: 100% ;height: 100% ;position: absolute;top: 50% ;left:80%"><span style=" font-size:20px ;">UltraSonic Sensor Reading</span><br><br><span id="sensorReading" style="width: 100% ; height: 100px ; font-size:20px ;padding: 10px; box-shadow: 2px 2px 2px 2px #888888; border: 1px solid;margin-left: 30px"> 127.0000000009</span></div>
-
+  <div id="sideDiv" class="senson-text">
+    <span class="font-20">
+      UltraSonic Sensor Reading
+    </span>
+    <br><br>
+    <span id="sensorReading" class="sensor-display" *ngIf="sensorDistance > 0">
+      {{sensorDistance}}
+    </span>
+  </div>
 </div>
