@@ -5,37 +5,37 @@
         <span >OVERRIDE</span>
         <label class="switch switch-label">
           <input type="checkbox">
-          <span class="slider round" (click)="overrideClick()" *ngIf="!overrideDis"></span>
+          <span class="slider round" (click)="common.overrideClick()" *ngIf="!common.overrideDis"></span>
         </label>
     </div>
     <div class="switch-outer" id="switchOne">
       <div class="color-parent">
-        <div class="color-box" id="textOne" [ngStyle]="redStatus ? {'background-color': 'red'} : {'background-color': 'white'} "></div>
+        <div class="color-box" id="textOne" [ngStyle]="common.redStatus ? {'background-color': 'red'} : {'background-color': 'white'} "></div>
       </div>
-      <span *ngIf="!redDis">Red</span>
+      <span *ngIf="!common.redDis">Red</span>
       <label class="switch switch-label">
-        <input type="checkbox" [disabled]="redDis" id="redSlider">
-        <span class="slider round" (click)="redClick(this)" *ngIf="!redDis"></span>
+        <input type="checkbox" [disabled]="common.redDis" id="redSlider">
+        <span class="slider round" (click)="common.redClick()" *ngIf="!common.redDis"></span>
       </label>
     </div>
     <div class="switch-outer" id="switchtwo">
       <div class="color-parent">
-        <div class="color-box" id="textTwo" [ngStyle]="yellowStatus ? {'background-color': 'yellow'} : {'background-color': 'white'} "></div>
+        <div class="color-box" id="textTwo" [ngStyle]="common.yellowStatus ? {'background-color': 'yellow'} : {'background-color': 'white'} "></div>
      </div>
-     <span *ngIf="!yellowDis">Yellow</span>
+     <span *ngIf="!common.yellowDis">Yellow</span>
       <label class="switch switch-label">
-       <input type="checkbox" [disabled]="yellowDis" id="yellowSlider">
-       <span class="slider round" (click)="yellowClick()" *ngIf="!yellowDis"></span>
+       <input type="checkbox" [disabled]="common.yellowDis" id="yellowSlider">
+       <span class="slider round" (click)="common.yellowClick()" *ngIf="!common.yellowDis"></span>
      </label>
     </div>
     <div class="switch-outer" id="switchthree">
       <div class="color-parent">
-        <div class="color-box" id="textThree" [ngStyle]="greenStatus ? {'background-color': 'green'} : {'background-color': 'white'} "></div>
+        <div class="color-box" id="textThree" [ngStyle]="common.greenStatus ? {'background-color': 'green'} : {'background-color': 'white'} "></div>
       </div>
-      <span *ngIf="!greenDis">Green</span>
+      <span *ngIf="!common.greenDis">Green</span>
       <label class="switch switch-label">
-        <input type="checkbox" [disabled]="greenDis" id="greenSlider">
-        <span class="slider round" (click)="greenClick()" *ngIf="!greenDis"></span>
+        <input type="checkbox" [disabled]="common.greenDis" id="greenSlider">
+        <span class="slider round" (click)="common.greenClick()" *ngIf="!common.greenDis"></span>
       </label>
     </div>
   </div>
@@ -45,8 +45,8 @@
       UltraSonic Sensor Reading
     </span>
     <br><br>
-    <span id="sensorReading" class="sensor-display" *ngIf="sensorDistance > 0">
-      {{sensorDistance}}
+    <span id="sensorReading" class="sensor-display" *ngIf="common.sensorDistance > 0">
+      {{common.sensorDistance}}
     </span>
   </div>
 </div>
