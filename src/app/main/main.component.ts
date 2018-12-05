@@ -14,8 +14,8 @@ class TransmitObject {
 export class MainComponent implements OnInit {
 
   common = {
-    pubKey: 'pub-c-a48eea9b-bec6-437f-a198-c629b1d05c4c',
-    subKey: 'sub-c-b3f1894c-b61b-11e8-9c8c-5aa277adf39c',
+    pubKey: 'pub-x-key',
+    subKey: 'sub-x-key',
     subscribeChannel: 'Hub Channel',
     publishChannel: 'Mobile Channel',
     pubnub_global: {},
